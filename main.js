@@ -1,22 +1,14 @@
 const logoWrapper = document.querySelector(".logo-wrapper");
 const logoImages = logoWrapper.querySelectorAll(".logo-element");
 
-const getActive = () => {
-  document.body.dataset.active === "true";
-};
-const setActiveTo = (active) => {
-  document.body.dataset.active = active;
-};
-
 const move = (image, index, rangeX, rangeY) => {
-  const active = getActive();
-
-  const translationIntensity = active ? 24 : 4;
+  const translationIntensity = 4;
   const maxTranslation = translationIntensity * (index + 1);
   const currentTranslation = `${maxTranslation * rangeX}% ${
     maxTranslation * rangeY
   }%`;
-  const scale = active ? 1 + index * 0.4 : 1;
+
+  const scale = 1;
 
   image.animate(
     {
@@ -47,12 +39,11 @@ const moveLogo = (e, logoImages) => {
 };
 
 const resetLogo = () => {
-  setActiveTo(false);
   moveAll(logoImages, 0.4, -0.7);
 };
 
 document.body.onmouseleave = () => {
-  if (!getActive()) resetLogo();
+  resetLogo();
 };
 
 addEventListener("mousemove", (e) => moveLogo(e, logoImages));
