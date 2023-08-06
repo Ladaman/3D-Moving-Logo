@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ad6cbc;
+  overflow: hidden;
+}
+#title {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 150px;
+  text-align: center;
+  color: #1e90ff;
+  opacity: 0.8;
+
+  margin: 100px 0;
+}
+.logo-container {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  user-select: none;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  aspect-ratio: 1 / 1;
+}
+
+.logo-wrapper .logo-element {
+  position: absolute;
+  width: 100%;
+
+  opacity: 0.5;
+}
+
+.logo-wrapper p {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 300px;
+  text-align: center;
+}
+
+.logo-wrapper p:nth-child(1) {
+  color: #ad6cbc;
+}
+.logo-wrapper p:nth-child(2) {
+  color: #8a75cd;
+}
+.logo-wrapper p:nth-child(3) {
+  color: #667ede;
+}
+.logo-wrapper p:nth-child(4) {
+  color: #4287ee;
+}
+.logo-wrapper p:nth-child(5) {
+  color: #1e90ff;
+}
+.logo-wrapper p:nth-child(6) {
+  color: #ffffff;
+}
